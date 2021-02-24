@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 500vh;
+    width: 100%;
+    background-image: url(imagen/bg.png);
+    background-size: cover;
+    background-position: center;
+    padding-right: 15%;
+    padding-left: 15%;
+    box-sizing: border-box;
+    position: static;
+    font-family: arial, sans-serif;
+}
+
+.me{
+    height: 30vh;
+    width: 150px;
+    position: static;
+    padding-left: 42%;
+    padding-right: 50%;
+    
+}
+
+.table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+    text-align: center;
+}
+
+.td, th {
+  border: 5px solid #000000;
+  text-align: center;
+  padding: 8px;
+}
+
+.one h1{
+     font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+    padding-left: 45%;
+    padding-right: 50%;
+}
+
+.one h2{
+     font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+    padding-left: -20%;
+    padding-right: 0%;
+    text-align: center;
+}
+
+.social{
+    left:-60 px;
+}
+
+.social a{
+    color: black;
+    padding-right: 0px;
+    font size: 12px;
+}
+
+.project {
+     font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+    text-align: center;
+}
