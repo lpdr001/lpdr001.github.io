@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>IMC</title>
+    
+    <style>
+        body{
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			font-family: arial;
+			min-height: 100vh;
+		}
+		div{
+			width: 500px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 1px 1px 20px blue;
+        }
+       input {
+           font: normal 13pt Arial;
+           text-align: center;
+           width: 100pt;
+        }
+        input {
+            font: normal 18pt Arial;
+            width: 100pt;
+        }
+        div#res {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular IMC</h1>
+    Ingresar peso en kilogramos y estatura en metros.<br><br>
+    <input type="number" name="peso" id="peso" placeholder="Peso"><br><br>
+    <input type="number" name="estatura" id="estatura" placeholder="Estatura"><br><br>
+    <input type="button" value="Calcular" onclick="imc()">
+    <div id = "res"><br></div><br>
+    <div id = "c"><br></div><br>
+  
+    <script type="text/javascript">
+        function imc() {
+            var c = document.getElementById("c");
+            var peso = document.getElementById("peso");
+            var estatura = document.querySelector("input#estatura");
+            var res = document.getElementById("res");
+            var v1 = Number(peso.value);
+            var v2 = Number(estatura.value);
+            var resul = v1 / (v2*v2);
+            var imct = resul.toFixed(2);
+            res.innerHTML = `Su IMC es igual a <strong>${imct}</strong>`;
+        
+           if (imct < 18.5) {
+            c.innerText = "Peso Bajo"
+           }
+           else if (imct>=18.5 && imct<=24.9) {
+           c.innerText = "Peso Ideal"
+           }
+           else if (imct>=25 && imct<=29.9) {
+           c.innerText = "Sobrepeso"
+           }
+           else if (imct>=30 && imct<=34.9) {
+           c.innerText = "Obesidad, Grado 1"
+           }
+           else if (imct>=35 && imct<=39.9) {
+           c.innerText = "Obesidad, Grado 2"
+           }
+           else {
+           c.innerText = "Obesidad Mórbida"
+           }
+        }
+
+    </script>
+</body>
+</html>
